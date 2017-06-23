@@ -43,13 +43,13 @@
 
 	/**
 	 * @description kintoneエラー出力の一元管理用キャッシュ
-	 * @type {{<string>フィールドコード: [<string>] エラー内容}}
+	 *  <string>フィールドコード:[<string>]エラー内容
 	 */
 	Queue.OnErrors = {};
 
 	/**
 	 * @description kintoneエラー出力の一元管理用フラグ
-	 * @type {{<string>フィールドコード: [<boolean>] エラーが発生または解消しているか}}
+	 * 	<string>フィールドコード:[<boolean>]エラーが発生状態
 	 */
 	Queue.IsError = {};
 
@@ -69,8 +69,8 @@
 	/**
 	 * @private
 	 * @description フィールドに表示するエラーを追加する（SetErrorから呼ばれる）
-	 * @type {string} _message エラー本文
-	 * @type {string} _field_code エラー表示対象のフィールドコード（省略するとイベントエラーとして扱う）
+	 * @type {String} _message エラー本文
+	 * @type {String} _field_code エラー表示対象のフィールドコード（省略するとイベントエラーとして扱う）
 	 */
 	Queue.PushError = function(_message, _field_code){
 		if(!Queue.OnErrors.hasOwnProperty(_field_code)){

@@ -1,0 +1,5 @@
+
+/**
+ * @constructor
+ */
+window.KintoneEventsOn = function(){};
